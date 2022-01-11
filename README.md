@@ -43,5 +43,5 @@ In the future I will test different models, such as multi-vector feature extract
 
 ## References
 
-https://github.com/christiansafka/img2vec
-https://cam-orl.co.uk/facedatabase.html
+- https://github.com/christiansafka/img2vec
+- https://cam-orl.co.uk/facedatabase.html
