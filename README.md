@@ -20,6 +20,23 @@ In this repository I am sharing demos to test modelling and classification algor
                                                                      └────────────────┘
 ```
 
+# Usage
+
+Clone the repository, setup a virtual environment and run the script:
+
+```
+python3 -m venv myvenv
+source myvenv/bin/activate
+pip install img2vec_pytorch
+pip install scipy
+```
+
+Then run the script under the `demo` folder:
+
+```
+python3 olivetti_test.py
+```
+
 # Future developments
 
 In the future I will test different models, such as multi-vector feature extraction for a single face, or different kind of indexing or even a neural network to speed up the classification of testing images.
