@@ -39,7 +39,7 @@ python3 olivetti_test.py
 
 # Future developments
 
-In the future I will test different models, such as multi-vector feature extraction for a single face, or different kind of indexing or even a neural network to speed up the classification of testing images.
+In the future I will test different models, such as multi-vector feature extraction for a single face, or different kind of indexing or even a neural network to speed up the classification of testing images (e.g. using [HNSW](https://www.pinecone.io/learn/hnsw/)).
 
 ## References
 
