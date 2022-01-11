@@ -16,7 +16,7 @@ def store_olivetti_models_dict():
     for person in range(1, 41):
         person = "s" + str(person)
         for face in range(1, 6):
-            facepath = './olivetti-database/' + person + "/" + str(face) + '.bmp'
+            facepath = '../olivetti-database/' + person + "/" + str(face) + '.bmp'
             print ("Training face: " + facepath)
             img = Image.open(facepath).convert('RGB')
             vec = img2vec.get_vec(img)
@@ -28,7 +28,7 @@ def test_olivetti_models_dict():
     for person in range(1, 41):
         person = "s" + str(person)
         for face in range(6, 11):
-            facepath = './olivetti-database/' + person + "/" + str(face) + '.bmp'
+            facepath = '../olivetti-database/' + person + "/" + str(face) + '.bmp'
             print ("Testing face: " + facepath)
             found = find_face_dict_cosin(facepath)
             if (person == found):
