@@ -37,7 +37,7 @@ def test_olivetti_models_dict():
     print(success/200*100)
 
 
-def find_face_dict(path):
+def find_face_dict_euclidean(path):
     global img2vec
     global trainDict
     results = {}
@@ -46,8 +46,7 @@ def find_face_dict(path):
     vec = img2vec.get_vec(queryImage)
 
     for i in trainDict.items():
-        tmp = np.absolute(np.subtract(vec,i[1]))
-        results[i[0]] = np.sum(tmp)
+        results[i[0]] = np.linalg.norm(vec-i[1])
     found = str(min(results, key=results.get))
 
     print (found.split("-")[0])
