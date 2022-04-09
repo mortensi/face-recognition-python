@@ -8,12 +8,12 @@ import numpy as np
 
 NUMBER_SAMPLES = 200
 FACE_IMAGE_VECTOR_FIELD='face_image_vector'
-IMAGE_VECTOR_DIMENSION=512
+IMAGE_VECTOR_DIMENSION=1024
 
 r = redis.Redis(host='127.0.0.1', port=6379, password='')
 r.flushdb()
 
-img2vec = Img2Vec(cuda=False)
+img2vec = Img2Vec(cuda=False, model='densenet')
 
 def store_olivetti_models():
     global r
