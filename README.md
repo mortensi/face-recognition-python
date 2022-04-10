@@ -6,8 +6,14 @@ In this repository I am sharing demos to test modelling and classification algor
 - For the training, I am using 5 images, and the remaining 5 images are used for testing through the classificating algorithm. So, in total, 200 training faces for 40 individuals and 200 testing faces. 
 - In the current demo, the model extraction is performed using Dense Convolutional Network in the [Pytorch](https://pytorch.org/hub/pytorch_vision_densenet/) library. 
 - One feature vector is extracted for every face using Christian Safka's wrapper library [img2vec](https://github.com/christiansafka/img2vec), the feature is stored in a dictionary in the form `{'person1_face1':'vector', 'person1_face2':'vector', ...,'person2:face1':'vector',...}`
-- The classification is performed using different approaches, being the cosin similarity the most effective (98% of the 200 test faces are recognized) to calculate the similarity of a test vector extracted from the face under test to the face from the training set.
-- Classification is performed iteratively, which is a quite slow approach, but it is sufficient for the sake of showing how a full system can be coded in a few lines of code. Hierarchical Navigable Small World similarity search is also tested, with the same good results (98% of the 200 test faces are recognized).
+
+## Classification algorithms
+
+The classification is performed using different approaches. See the `demo` folder to learn about the different methods.
+
+- Brute force. Classification is performed iteratively, which is a quite slow approach, but it is sufficient for the sake of showing how a full system can be coded in a few lines of code. The cosin similarity the is most effective distance (`98%` of the 200 test faces are recognized) to calculate the similarity of a test vector extracted from the face under test to the face from the training set.
+- Hierarchical Navigable Small World similarity search is also tested, with the same good results (`98%` of the 200 test faces are recognized).
+- RediSearch Vector Similarity Search. Using this feature, it is possible to index heterogeneous sources of data once converted in their corresponding vector embedding, and then use such index to perform similarity search. Read more in my [blog](https://www.mortensi.com/2022/04/face-recognition-with-redisearch-and-vector-similarity/).
 
 ```
 ┌────────────────┐      ┌────────────────┐     ┌────────────────┐    ┌────────────────┐
