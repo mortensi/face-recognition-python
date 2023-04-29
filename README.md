@@ -1,4 +1,4 @@
-# personDB
+# Face Recognition Classification Methods using Python
 
 In this repository I am sharing demos to test modelling and classification algorithms for face recognition. At the moment the typical pipeline is not implemented in all its components. In particular, I will start with a simple experiment:
 
