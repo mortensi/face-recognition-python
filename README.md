@@ -38,6 +38,7 @@ source myvenv/bin/activate
 pip install img2vec_pytorch
 pip install scipy
 pip install hnswlib
+pip install redis
 ```
 
 Then run the script `iter_test.py` to store the vector embeddings in a dictionary and perform iterative classification:
@@ -53,6 +54,14 @@ Or run the script `hnswlib_test.py` to store the embeddings and perform the clas
 cd demo
 python3 hnswlib_test.py
 ```
+
+Finally, you can test the similarity of the test images with the faces modeled in the Redis database using the Vector Similarity Search features. Run the test as follows:
+
+```
+cd demo
+python3 vectorsimilarity_test.py
+```
+
 
 # Future developments
 

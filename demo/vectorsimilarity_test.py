@@ -63,7 +63,7 @@ def find_face(path):
     vec = img2vec.get_vec(img)
     face_image_vector = vec.astype(np.float32).tobytes()
 
-    q = Query("*=>[KNN 1 @face_image_vector $vec]").return_field("__face_image_vector_score")
+    q = Query("*=>[KNN 1 @face_image_vector $vec]").return_field("__face_image_vector_score").dialect(2)
     res = r.ft().search(q, query_params={"vec": face_image_vector})
 
     for face in res.docs:
